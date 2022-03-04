@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Capstone 1 Portfolio</title>
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="myProjects/webProject/icofont/css/icofont.min.css">
+
+<link rel="stylesheet" type="text/css" href="./index.css">
+
+
+
+</head>
+<body>
+	<!-- header sections -->
+	<header id="header">
+		<div class="d-flex flex-column">
+			<div class="profile">
+				<img src="./image/profile.jpg" alt="" class="img-fluid rounded-circle">
+				<h1 class="text-light"><a href="index.html">Joseph Brillantes</a></h1>
+				<div class="social-links mt-3 text-center">
+					<a href="https://www.linkedin.com/in/josephbrillantesonline/">
+						<span class="icon"><i class="fa fa-linkedin"></i></span>
+					</a>
+					<a href="https://www.facebook.com/joseph.brillantes.589">
+						<span class="icon"><i class="fa fa-facebook"></i></span>
+					</a>
+					<a href="https://twitter.com/SephOnlineServ">
+						<span class="icon"><i class="fa fa-twitter"></i></span>
+					</a>
+					<a href="https://www.instagram.com/sephonlineserv/">
+						<span class="icon"><i class="fa fa-instagram"></i></span>
+					</a>
+
+				</div>
+
+				
+
+			</div>
+			<!-- Navbar -->
+			<nav class="nav-menu">
+				<ul>
+				<li class="active">
+					<a href="index.html"><i class="fa fa-home"></i><span>Home</span></a>
+				</li>
+				<li>
+					<a href="#about-me"><i class="fa fa-user"></i><span>About Me</span></a>
+				</li>
+				<li>
+					<a href="#projects"><i class="fa fa-book"></i><span>Projects</span></a>
+				</li>
+				<li>
+					<a href="#services"><i class="fa fa-gear"></i><span>Services</span></a>
+				</li>
+				<li>
+					<a href="#contact-me"><i class="fa fa-phone"></i><span>Contact Me</span></a>
+				</li>
+			</ul>
+			</nav>
+			<!-- end navbar -->
+			<button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+			
+		</div>
+		
+	</header>
+	<script type="text/javascript">
+		const typedTextSpan = document.querySelector(".typed-text");
+const cursorSpan = document.querySelector(".cursor");
+
+const textArray = ["Freelancer", "Web Developer", "Landing Page Designer", "Chemical Engineer"];
+const typingDelay = 200;
+const erasingDelay = 100;
+const newTextDelay = 2000; // Delay between current and next text
+let textArrayIndex = 0;
+let charIndex = 0;
+
+function type() {
+  if (charIndex < textArray[textArrayIndex].length) {
+    if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+    typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+    charIndex++;
+    setTimeout(type, typingDelay);
+  } 
+  else {
+    cursorSpan.classList.remove("typing");
+    setTimeout(erase, newTextDelay);
+  }
+}
+
+function erase() {
+  if (charIndex > 0) {
+    if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+    typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
+    charIndex--;
+    setTimeout(erase, erasingDelay);
+  } 
+  else {
+    cursorSpan.classList.remove("typing");
+    textArrayIndex++;
+    if(textArrayIndex>=textArray.length) textArrayIndex=0;
+    setTimeout(type, typingDelay + 1100);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
+  if(textArray.length) setTimeout(type, newTextDelay + 250);
+});
+
+
+	</script>
+
+
+	<!-- hero section -->
+	<section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+		<div class="hero-container">
+			<h1>Joseph Brillantes</h1>
+			<p>I am a Web Developer!
+		</p>
+		</div>
+	</section>
+
+	
+    <!-- end hero -->
+
+    <main id="main">
+
+    	 <!-- About me -->
+
+    <section id="about-me" class="about-me pt-5">
+    	<div class="container">
+    		<div class="about-me-title">
+    			<h2>About Me</h2>
+    		<div class="row pt-3">
+    			<div class="col-lg-4">
+    				<img src="./image/profile.jpg" class="img-fluid" alt="">
+    			</div>
+    				<div class=" col-lg-8 pt-4 pt-lg-0 content">
+    					<p> Hi there! I am Joseph Brillantes! </p>
+    					<p>I am a chemical engineer by profession but since my passion is into tech, I am venturing now into web development. I am currently improving my skills through a program offered by Zuitt which is Web Development Bootcamp. I am also a freelancer offering my clients Landing Page Design.</p>
+    				</div>
+    		</div>
+    	
+    </section>
+
+    <!-- end about me -->
+
+ <!-- Projects -->
+    <section id="projects" class="services pt-5">
+    	<div class="container">
+    		<h2>Projects</h2>
+    		<p>Below you can find my previous projects that I directly handled.</p>
+
+    	</div>
+    	<div class="row">
+    		<div class="col-lg-4 col-sm-12">
+    			<img class="img-fluid" src="https://cdn.mos.cms.futurecdn.net/yJpqZpbcP3JQngvNzqqYuA-970-80.png.webp" alt="front end">
+    			<h5 class="text-center pt-3">Project 1</h5>
+    			
+    		</div>
+
+    		<div class="col-lg-4 col-sm-12">
+    			<img class="img-fluid" src="https://codecondo.com/wp-content/uploads/2017/09/back-end-developer.jpg" alt="front end">
+    			<h5 class="text-center pt-3">Project 2</h5>
+    			
+    		</div>
+
+    		<div class="col-lg-4 col-sm-12">
+    			<img class="img-fluid" src="https://www.mindinventory.com/blog/wp-content/uploads/2018/07/full-stack1200-1024x512.png" alt="front end">
+    			<h5 class="text-center pt-3">Project3</h5>
+    			
+    		</div>
+    	</div>
+    </section>
+
+
+<!-- end projects -->
+
+
+
+
+   <!-- Services -->
+    <section id="services" class="services pt-5">
+    	<div class="container">
+    		<h2>Services</h2>
+
+
+    	</div>
+    	<div class="row">
+    		<div class="col-lg-4 col-sm-12">
+    			<img class="img-fluid" src="https://cdn.mos.cms.futurecdn.net/yJpqZpbcP3JQngvNzqqYuA-970-80.png.webp" alt="front end">
+    			<h5 class="text-center pt-3">Front End Development</h5>
+    			
+    		</div>
+
+    		<div class="col-lg-4 col-sm-12">
+    			<img class="img-fluid" src="https://codecondo.com/wp-content/uploads/2017/09/back-end-developer.jpg" alt="front end">
+    			<h5 class="text-center pt-3">Back End Development</h5>
+    			
+    		</div>
+
+    		<div class="col-lg-4 col-sm-12">
+    			<img class="img-fluid" src="https://www.mindinventory.com/blog/wp-content/uploads/2018/07/full-stack1200-1024x512.png" alt="front end">
+    			<h5 class="text-center pt-3">Full Stack Development</h5>
+    			
+    		</div>
+    	</div>
+    </section>
+
+    <!-- contact me -->
+    <section class="pt-5" id="contact-me">
+    	 <!-- Contact Form -->
+    	<div class="row">
+			<div class="col-md-6 my-4 align-items-center">
+				<h2>Find Us!</h2>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3881.8007055422413!2d123.73254010047282!3d13.362664900025521!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a1adbeb9c686eb%3A0x1b1d297f037718f!2s263%20Arellano%20St%2C%20Tabaco%20City%2C%20Albay!5e0!3m2!1sen!2sph!4v1646317757757!5m2!1sen!2sph" frameborder="0" style="border: 0; width: 100%; height: 290px;" allowfullscreen></iframe>
+			</div>
+			<div class="col-lg-6 my-4">
+				<h2>Contact Me!</h2>
+				<form>
+					<div class="form-group">
+							<label for="name">Name</label>
+							<input type="text" id="name" class="form-control" placeholder="Full Name" required autocomplete="">
+							
+						</div>
+					<div class="form-group">
+						<label for="txt-email">Email:</label>
+						<input id="txt-email" class="form-control" type="email" name="email" placeholder="name@example.com">
+					</div>
+					
+
+					<div class="form-group">
+						<label for="txt-message">Messages:</label>
+						<textarea id="txt-message" class="form-control" rows="3">
+						</textarea>
+					</div>
+						<button type="button" data-toggle="modal" data-target="#exampleModal">Send Email</button>
+				</form>
+    			</div>
+    			
+    		</div>
+    	</div>
+    	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                    	Thank you for contacting us!
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                     Message Successfully Sent
+                </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close
+                    </button>
+                  </div>
+            </div>
+       </div>
+            <!-- Modal End -->
+	</div>
+    </section>
+
+    <section id="pre-footer">
+		<div>
+			<h3>Location</h3>
+
+			<i></i>
+			<p><i class="fa fa-map"></i><span>Tabaco City, Albay, Philippines</span></p>
+		</div>
+		<div>
+			<h3>Email</h3>
+			<p><i class="fa fa-envelope"></i><span>josephbrillantesonline@gmail.com</span></p>
+		</div>
+		
+
+	</section>
+	<!-- end of prefooter -->
+	<!-- footer -->
+	<span>Terms of Service</span>
+	<span>|</span>
+	<span>Privacy Policy</span>
+	<span>|</span>
+	<span>All rights reserved</span>
+	<!-- end of footer -->
+
+    </main>
+   
+	
+
+
+	
+
+
+
+
+
+
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+</body>
+</html>
