@@ -159,7 +159,7 @@ a{
 
 }
 
-,mobile-nav-active #header {
+mobile-nav-active #header {
 	left: 0;
 }
 
@@ -207,6 +207,38 @@ a{
 	font-size: 34px;
 	font-family: "Poppins", sans-serif;
 }
+
+#staticText{
+  color: white;
+  font-size: 40px;
+  line-height: 1.2;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  postion: fixed;
+}
+
+
+#typeline {
+  color: white;
+  font-size: 40px;
+  line-height: 1.2;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  postion: fixed;
+}
+
+@-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
+em {
+	border-right: 0px solid black;
+	width: 20ch;
+	white-space: nowrap;
+	overflow: hidden;
+  	margin-top: 0;
+  	color: white;
+	-webkit-animation: typing 3s steps(21, end),
+	blink-caret .5s step-end infinite alternate;
+}
+
  
 
 .skills .progress {
@@ -279,4 +311,5 @@ button	{
 #pre-footer > div > * {
 	margin-top: 0.3rem;
 	margin-bottom: 0.3rem;
+	text-align: center;
 }
